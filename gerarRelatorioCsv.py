@@ -35,18 +35,7 @@ def main():
             salvarRelatorioCsv('relatorio-dezLivrosMaisCaros', result)
 
             # segunda query -- 5 editoras que mais tem livros
-<<<<<<< HEAD
             cursor.execute(loadQueryFromFile('cincoEditorasComMaisLivros.sql'))
-=======
-            cursor.execute("""
-                select EDITORA.CodEditora as 'Código Editora', EDITORA.Nome as 'Nome Editora',
-                count(LIVRO.Editora) as 'Livros Publicados' from LIVRO
-                right join EDITORA on EDITORA.CodEditora = LIVRO.Editora
-                group by EDITORA.CodEditora
-                order by count(LIVRO.Editora) desc
-                limit 5;
-            """)
->>>>>>> 9a6fb26973bf8b6cebcb3dc5b828c9f43d024147
 
             result = cursor.fetchall() # resgatando o conteúdo da busca
             result.insert(0, cursor.column_names) # inserindo o header da consulta no começo do resultado para escrita
