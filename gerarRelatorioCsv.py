@@ -1,6 +1,6 @@
 #!/usr/bin/ python3
 
-__autor__ = 'Naamã Costa'
+__author__ = 'Naamã Costa'
 __github__  = '@zNairy | https://github.com/zNairy/'
 __repository__ = 'https://github.com/zNairy/CsvReport'
 
